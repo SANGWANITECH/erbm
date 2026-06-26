@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #1B2A4A;
+  --navy-light: #2C3E6B;
+  --navy-dark: #111D33;
+  --gold: #B8860B;
+  --gold-light: #D4A017;
+  --gold-dim: rgba(184,134,11,0.12);
+  --teal: #0E7490;
+  --teal-dim: rgba(14,116,144,0.1);
+  --green: #15803D;
+  --green-dim: rgba(21,128,61,0.1);
+  --red: #B91C1C;
+  --red-dim: rgba(185,28,28,0.1);
+  --amber: #D97706;
+  --amber-dim: rgba(217,119,6,0.1);
+  --bg: #F8FAFC;
+  --bg-2: #F1F5F9;
+  --bg-3: #E2E8F0;
+  --surface: #FFFFFF;
+  --border: #E2E8F0;
+  --border-dark: #CBD5E1;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-dim: #64748B;
+  --text-muted: #94A3B8;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+#root { height: 100vh; display: flex; flex-direction: column; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-2); }
+::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 3px; }
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .stat-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  .stat-grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
+  .page-pad { padding: 16px !important; }
+  .hide-mobile { display: none !important; }
+  .mwk-card-flex { flex-direction: column !important; gap: 12px !important; }
+  .mwk-stats-row { gap: 12px !important; }
+  .chart-controls { flex-direction: column !important; gap: 12px !important; }
+  .period-border { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 12px !important; }
+}
+
+@media (max-width: 480px) {
+  .stat-grid-4 { grid-template-columns: 1fr !important; }
+  .stat-grid-3 { grid-template-columns: 1fr !important; }
+}
